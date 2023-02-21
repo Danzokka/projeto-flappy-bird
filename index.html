@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/logo.png">
+    <title>Projeto Flappy Bird</title>
+    <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
+    <style>        
+        canvas{
+            border: 1px transparent rgba(5, 10, 70);
+            display: block;
+            margin: 0 auto;
+            margin-top: 50px;
+            border-radius: 15px;
+
+        }
+        body{
+            background: radial-gradient(circle,#907AD6,rgba(5, 10, 70),#000);
+        }
+        .logo{
+        margin-top: px;
+        margin-bottom: -130px;
+        margin-left: 100px;
+        width: 280px;
+        user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="https://danzokka.github.io/new-portfolio/">
+            <img src="img/logobranca.png" class="logo">
+        </a>
+    </nav>
+
+    <div>
+        
+        <canvas id="bird" width="320" height="480"></canvas>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
