@@ -56,10 +56,14 @@ canvas.addEventListener("click", function(evt){
             break;
         case estado.gameOver:
             let rect = canvas.getBoundingClientRect();
-            canos.reseta();
-            bird.resetaaVelocidade();
-            pontuacao.reseta();
-            estado.inicial = estado.getReady;
+            
+            // checa se o clique foi no botão START
+            if(clickX >= startBtn.x && clickX <= startBtn.x + startBtn.w && clickY >= startBtn.y && clickY <= startBtn.y + startBtn.h){
+                canos.reseta();
+                bird.resetaaVelocidade();
+                pontuacao.reseta();
+                estado.inicial = estado.getReady;
+            }
             break;
     }
 });
