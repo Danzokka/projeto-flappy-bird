@@ -5,40 +5,88 @@
     <link rel="icon" href="img/logo.png">
     <title>Projeto Flappy Bird</title>
     <link href="https://fonts.googleapis.com/css?family=Teko:700" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/01d22bbb46.js" crossorigin="anonymous"></script>
     <style>        
         canvas{
             border: 1px transparent rgba(5, 10, 70);
             display: block;
             margin: 0 auto;
-            margin-top: 50px;
+            margin-bottom: auto;
             border-radius: 15px;
+            margin-top: -135px;
+            width: 100%;
+            height: 100%;
 
+        }
+        html{
+            height: 100%;
         }
         body{
             background: radial-gradient(circle,#907AD6,rgba(5, 10, 70),#000);
+            height: 80%;
+
+        }
+        .container{
+            height: 100%;
+            position: relative;
+        }
+        .center{
+            margin: 0;
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
         .logo{
-        margin-top: px;
-        margin-bottom: -130px;
-        margin-left: 100px;
-        width: 280px;
-        user-select: none;
+            margin-bottom: -75px;
+            margin-left: 100px;
+            width: 280px;
+            user-select: none;
+        }
+        @media (min-width: 600px){
+            .logo{
+                margin-left: 20px;
+                margin-top: -20px;
+            }
+        }
+        nav .fab{
+            font-size: 25px;
+            float: right;
+            margin-top: 25px;
+        }
+        .fab{
+            text-decoration: none;
+            margin-right: 15px;
+            color: #ababab;
+            display: inline-block;
+            transition: transform 0.7s;
+        }
+        .fab:hover{
+            color: #907AD6;
+            transform: translateY(-5px);
         }
     </style>
+
 </head>
 
 <body>
-    <nav>
-        <a href="https://danzokka.github.io/new-portfolio/">
-            <img src="img/logobranca.png" class="logo">
-        </a>
-    </nav>
-
-    <div>
-        
+    <header>
+        <nav>
+            <a href="https://danzokka.github.io/new-portfolio/">
+                <img src="img/logobranca.png" class="logo">
+            </a>
+            <a href="https://github.com/Danzokka">
+                <i class="fab fa-github"></i>
+            </a>    
+        </nav>
+    </header>
+    <div class="container">   
+        <div class="center">
         <canvas id="bird" width="320" height="480"></canvas>
+        <script src="game.js"></script>
+        </div>
     </div>
-
-    <script src="game.js"></script>
 </body>
+
 </html>
